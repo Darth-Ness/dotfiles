@@ -1,0 +1,25 @@
+.tab-background {
+	background-color: #2672f2;
+    box-shadow: 2px rgba(0,0,0,0.2) !important;	
+}
+.tabbrowser-tab:hover .tab-background:not([selected]) {
+    background: #2119a8 !important;
+}
+tabbrowser-tabs {
+	background: #fff;
+}
+.tabbrowser-tab[selected] .tab-background {
+    background: #0d0079 !important;
+}
+#urlbar-background {
+	background: #100044 !important;
+}
+#nav-bar {
+	background: #0b002d !important;
+}
+:root {
+  --tab-border-radius: 10px !important;
+}
+.titlebar-color {
+	background-color: #0043b7;
+}
