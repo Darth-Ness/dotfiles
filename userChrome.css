@@ -1,25 +1,42 @@
 .tab-background {
-	background-color: #2672f2;
-    box-shadow: 2px rgba(0,0,0,0.2) !important;	
+	background-color: #2E3440;
+    box-shadow: 2px rgba(0,0,0,0.2) !important;
 }
 .tabbrowser-tab:hover .tab-background:not([selected]) {
-    background: #2119a8 !important;
+    background: #444 !important;
 }
 tabbrowser-tabs {
 	background: #fff;
 }
 .tabbrowser-tab[selected] .tab-background {
-    background: #0d0079 !important;
+    background: #555 !important;
 }
 #urlbar-background {
-	background: #100044 !important;
+	background: #3b4252 !important;
+}
+#urlbar {
+    color: #8fbcbb !important;
 }
 #nav-bar {
-	background: #0b002d !important;
+	background: #434C5E !important;
 }
 :root {
   --tab-border-radius: 10px !important;
 }
+#nav-bar { /* main toolbar */
+  -moz-box-ordinal-group: 1 !important;
+}
+
+#PersonalToolbar { /* bookmarks toolbar */
+  -moz-box-ordinal-group: 2 !important;
+}
+
+#titlebar { /* tab bar */
+  -moz-box-ordinal-group: 3 !important;
+}
 .titlebar-color {
-	background-color: #0043b7;
+	background-color: #000;
+}
+tab *{
+color: #8FBCBB !important;
 }
