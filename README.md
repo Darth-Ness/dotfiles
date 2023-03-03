@@ -1,12 +1,10 @@
 # dotfiles
-- WM: I3-Gaps
-- OS: Manjaro
+- WM: I3
 - Terminal: Terminator
 - Shell: Fish
-- Panel: i3-default
-- Editor: Vim
-- Browser: LibreWolf
-- File Manager: Ranger
-- Application Launcher: dmenu
+- Panel: Polybar
+- Editor: Neovim
+- Browser: Firefox
+- File Manager: Ranger 
 
 Note- Not all of these apps will have a dotfile
