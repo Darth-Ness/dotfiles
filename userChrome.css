@@ -1,6 +1,5 @@
 .tab-background {
 	background-color: #2E3440;
-    box-shadow: 2px rgba(0,0,0,0.2) !important;
 }
 .tabbrowser-tab:hover .tab-background:not([selected]) {
     background: #444 !important;
@@ -20,23 +19,79 @@ tabbrowser-tabs {
 #nav-bar {
 	background: #434C5E !important;
 }
-:root {
-  --tab-border-radius: 10px !important;
-}
-#nav-bar { /* main toolbar */
-  -moz-box-ordinal-group: 1 !important;
-}
-
-#PersonalToolbar { /* bookmarks toolbar */
-  -moz-box-ordinal-group: 2 !important;
-}
-
-#titlebar { /* tab bar */
-  -moz-box-ordinal-group: 3 !important;
-}
 .titlebar-color {
 	background-color: #000;
 }
 tab *{
 color: #8FBCBB !important;
 }
+#TabsToolbar { visibility: collapse !important; }
+#sidebar-header { visibility: collapse !important; }
+#titlebar { appearance: none !important }
+
+:root{
+  --uc-autohide-toolbox-delay: 200ms; /* Wait 0.1s before hiding toolbars */
+  --uc-toolbox-rotation: 82deg;  /* This may need to be lower on mac - like 75 or so */
+}
+
+:root[sizemode="maximized"]{
+  --uc-toolbox-rotation: 88.5deg;
+}
+
+@media  (-moz-platform: windows),
+        (-moz-os-version: windows-win7),
+        (-moz-os-version: windows-win10){
+
+  #navigator-toolbox:not(:-moz-lwtheme){ background-color: -moz-dialog !important; }
+}
+
+:root[sizemode="fullscreen"],
+#navigator-toolbox[inFullscreen]{ margin-top: 0 !important; }
+
+#navigator-toolbox{
+  position: fixed !important;
+  display: block;
+  background-color: var(--lwt-accent-color,black) !important;
+  transition: transform 82ms linear, opacity 82ms linear !important;
+  transition-delay: var(--uc-autohide-toolbox-delay) !important;
+  transform-origin: top;
+  transform: rotateX(var(--uc-toolbox-rotation));
+  opacity: 0;
+  line-height: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+/* #mainPopupSet:hover ~ box > toolbox, */
+/* Uncomment the above line to make toolbar visible if some popup is hovered */
+#navigator-toolbox:hover,
+#navigator-toolbox:focus-within{
+  transition-delay: 33ms !important;
+  transform: rotateX(0);
+  opacity: 1;
+}
+
+#navigator-toolbox > *{ line-height: normal; pointer-events: auto }
+
+#navigator-toolbox,
+#navigator-toolbox > *{
+  width: 100vw;
+  -moz-appearance: none !important;
+}
+
+/* These two exist for oneliner compatibility */
+#nav-bar{ width: var(--uc-navigationbar-width,100vw) }
+#TabsToolbar{ width: calc(100vw - var(--uc-navigationbar-width,0px)) }
+
+/* Don't apply transform before window has been fully created */
+:root:not([sessionrestored]) #navigator-toolbox{ transform:none !important }
+
+:root[customizing] #navigator-toolbox{
+  position: relative !important;
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+#navigator-toolbox[inFullscreen] > #PersonalToolbar,
+#PersonalToolbar[collapsed="true"]{ display: none }
