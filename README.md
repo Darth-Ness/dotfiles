@@ -1,4 +1,5 @@
-![2023-03-03_14-51](https://user-images.githubusercontent.com/75047141/222813921-41d09fa5-438d-45fe-9d14-c1613ad47eeb.png)
+![2023-03-08_09-34](https://user-images.githubusercontent.com/75047141/223741090-144df0ce-4676-44ea-86a4-16eff48b7f1c.png)
+
 # dotfiles
 - WM: I3
 - Terminal: Terminator
