@@ -6,8 +6,8 @@
 - Shell: Fish
 - Panel: Polybar
 - Editor: Neovim
-- Browser: Firefox
-- File Manager: Ranger 
+- Browser: Firefox and Librewolf
+- File Manager: Ranger
 
 Note- Not all of these apps will have a dotfile
 
