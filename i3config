@@ -1,5 +1,5 @@
 set $mod Mod4
-font pango:monospace 8
+font pango:DejaVu Sans 9
 
 floating_modifier $mod
 
@@ -88,6 +88,9 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+# Take Screenshot
+bindsym $mod+i exec flameshot gui
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         bindsym h resize shrink width 5 px or 5 ppt
@@ -115,3 +118,9 @@ bindsym $mod+minus scratchpad show
 default_border pixel 0
 exec_always --no-startup-id xset dpms 0 0 60 &
 exec_always --no-startup-id xss-lock -- i3lock -n -i ~/Documents/Nord-Wallpapers/wallpapers/14.png &
+bindsym $mod+d exec $ei rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -column 3 -font 'Sans 10'
+ exec $ei picom
+default_border pixel 0
+hide_edge_borders both
+gaps inner 10
+gaps outer 10
