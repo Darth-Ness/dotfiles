@@ -3,11 +3,12 @@ modules-left = ewmh
 modules-right = temperature pulseaudio memory cpu date
 background = #2e3440
 foreground = #5e81ac
+label-padding = 5px
 
 [module/date]
 type = internal/date
-date = %Y-%m-%d %H:%M
-label-padding = 5px
+date = %m-%d-%Y %H:%M:%S
+label-padding = 20px
 
 [module/cpu]
 type = internal/cpu
@@ -18,7 +19,7 @@ warn-percentage = 95
 type = internal/xworkspaces
 pin-workspaces = true
 
-enable-click = true
+enable-click = false
 
 enable-scroll = false
 
@@ -33,7 +34,7 @@ format-volume = <ramp-volume> <label-volume>
 interval = 3
 
 warn-percentage = 95
-label-padding = 5px
+label-padding = 20px
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -53,4 +54,4 @@ interval = 0.5
 thermal-zone = 0
 base-temperature = 20
 warn-temperature = 60
-label-padding = 5px
+label-padding = 20px
