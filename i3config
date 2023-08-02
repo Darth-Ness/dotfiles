@@ -106,21 +106,22 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-hide_edge_borders both
-default_border none
+hide_edge_borders smart
+default_border pixel 4
 bindsym $mod+p exec i3lock
+# Activate smart borders (always)
+
 
 #Scratchpad stuff
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # Show the sup-mail scratchpad window, if any.
-default_border pixel 0
 exec_always --no-startup-id xset dpms 0 0 60 &
-exec_always --no-startup-id xss-lock -- i3lock -n -i ~/Documents/Nord-Wallpapers/wallpapers/14.png &
+exec_always --no-startup-id xss-lock -- i3lock -n -i ~/Backgrounds/linkinforest.png &
 bindsym $mod+d exec $ei rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -column 3 -font 'Sans 10'
- exec $ei picom
-default_border pixel 0
-hide_edge_borders both
+exec $ei picom
+exec $ei polybar
+exec $ei ~/AB_Scripts/./wallee
 gaps inner 10
 gaps outer 10
