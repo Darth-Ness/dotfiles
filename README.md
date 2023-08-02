@@ -2,12 +2,12 @@
 
 # dotfiles
 - WM: I3
-- Terminal: Terminator
+- Terminal: LxTerminal
 - Shell: Fish
 - Panel: Polybar
 - Editor: Neovim
-- Browser: Firefox and Librewolf
-- File Manager: Ranger
+- Browser: Librewolf
+- File Manager: ls, cat, mv, cp, rm
 
 Note- Not all of these apps will have a dotfile
 
