@@ -9,6 +9,7 @@ Plugin 'arcticicestudio/nord-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'preservim/nerdtree'
 Plugin 'voldikss/vim-floaterm'
+Plugin 'cheat/vim-so'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -25,9 +26,8 @@ colorscheme nord
 map <F4> :NERDTreeToggle<CR>
 map <F5> :FloatermToggle<CR>
 
-let g:vimwiki_list = [{
-  \ 'path': '/home/pi/vimwiki',
-  \ 'template_path': '/home/pi/vimwiki/templates',
-  \ 'template_default': 'default',
-  \ 'template_ext': '.html'}]
-
+let g:so_browser = "librewolf"
+command -nargs=1 So call so#search(<q-args>)
+command SoView call so#view()
+nnoremap <C-N> :call so#next()<CR>
+nnoremap <C-P> :call so#prev()<CR>
