@@ -1,15 +1,15 @@
 [bar/mybar]
 modules-left = ewmh 
-modules-center = menu-apps
 modules-right = temperature pulseaudio memory cpu date
 background = #da2e3440
 foreground = #5e81ac
 label-padding = 5px
 radius = 10.0
 border-size = 3
+
 [module/date]
 type = internal/date
-date = %m-%d-%Y %H:%M:%S
+date = %j-%Y %m-%d-%Y %H:%M:%S
 label-padding = 20px
 
 [module/cpu]
@@ -57,30 +57,3 @@ thermal-zone = 0
 base-temperature = 20
 warn-temperature = 60
 label-padding = 20px
-
-[module/menu-apps]
-type = custom/menu
-
-; If true, <label-toggle> will be to the left of the menu items (default).
-; If false, it will be on the right of all the items.
-expand-right = true
-
-; "menu-LEVEL-N" has the same properties as "label-NAME" with
-; the additional "exec" property
-;
-; Commands will be executed using "/bin/sh -c $COMMAND"
-
-menu-0-0 = Browsers
-menu-0-0-exec = #menu-apps.open.1
-menu-0-1 = Multimedia
-menu-0-1-exec = #menu-apps.open.2
-
-menu-1-0 = Firefox
-menu-1-0-exec = firefox
-menu-1-1 = Chromium
-menu-1-1-exec = chromium
-
-menu-2-0 = Gimp
-menu-2-0-exec = gimp
-menu-2-1 = Scrot
-menu-2-1-exec = scrot
