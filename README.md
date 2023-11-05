@@ -12,3 +12,7 @@
 Note- Not all of these apps will have a dotfile
 
 My wallpapers may be found here: https://github.com/thefallnn/Nord-Wallpapers/tree/master/wallpapers
+Todo:
+  Move to Sway.
+  Update Wallpapers (They've become terribly out of date)
+  Configure Tmux and add it's config file
