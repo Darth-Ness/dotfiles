@@ -31,7 +31,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+t layout toggle split
 
 # toggle tilig / floating
 bindsym $mod+Shift+space floating toggle
@@ -40,7 +40,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -116,7 +116,7 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # Show the sup-mail scratchpad window, if any.
-exec_always --no-startup-id xset dpms 0 0 300 &
+exec --no-startup-id xset s off -dpms which
 exec_always --no-startup-id xss-lock -- i3lock -ku -c 000000  --time-color=#bf616a --time-size=370 --fill
 bindsym $mod+d exec $ei rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -column 3 -font 'Sans 10'
 exec $ei picom
@@ -133,3 +133,10 @@ client.urgent           #2f343a #b48ead #d8dee9 #b48ead #900000
 client.placeholder      #000000 #b48ead #d8dee9 #000000   #0c0c0c
 
 client.background       #d8dee9
+
+bindsym $mod+z exec playerctl play-pause
+bindsym $mod+x  exec pactl set-sink-volume 0 +5%
+bindsym $mod+a exec pactl set-sink-volume 0 -5%
+
+bindsym $mod+e exec setxkbmap es
+bindsym $mod+u exec setxkbmap us
