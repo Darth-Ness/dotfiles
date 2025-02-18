@@ -7,3 +7,13 @@
 .sm\:max-w-\[500px\] {
     max-width: 100%
 }
+article {
+    width: 100%;
+    max-width: 50% !important;
+    margin-right: auto;
+	margin-left: auto;
+}
+.max-w-prose,.mx-auto {
+    max-width:100%;
+	text-align:center;
+}
