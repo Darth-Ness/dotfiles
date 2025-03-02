@@ -16,6 +16,9 @@ p {
 .thing .title:visited{
     color: #b48ead !important; 
 }
+.thing .title {
+    color: #5e81ac !important; 
+}
 .commentsignupbar, .listingsignupbar, #sr-header-area, .user, .side, .footer-parent {
     display: none !important;
 }
