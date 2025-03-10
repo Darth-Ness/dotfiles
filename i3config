@@ -3,7 +3,7 @@ font pango:DejaVu Sans 9
 
 floating_modifier $mod
 
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec wezterm
 bindsym $mod+Shift+q kill
 
 bindsym $mod+h focus left
@@ -119,9 +119,10 @@ bindsym $mod+minus scratchpad show
 exec --no-startup-id xset s off -dpms which
 exec_always --no-startup-id xss-lock -- i3lock -ku -c 000000  --time-color=#bf616a --time-size=370 --fill
 bindsym $mod+d exec $ei rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -column 3 -font 'Sans 10'
-exec $ei picom
+exec $ei picom --config .config/picom
+exec $ei bash ~/wallpaper
 exec $ei polybar
-exec $ei ~/AB_Scripts/./wallee
+exec $ei ~/Documents/fusionRSS/fusion
 gaps inner 10
 gaps outer 10
 
@@ -135,8 +136,21 @@ client.placeholder      #000000 #b48ead #d8dee9 #000000   #0c0c0c
 client.background       #d8dee9
 
 bindsym $mod+z exec playerctl play-pause
+bindsym $mod+Shift+x exec playerctl next
+bindsym $mod+Shift+z exec playerctl previous
+bindsym $mod+Shift+a mode "kde"
 bindsym $mod+x  exec pactl set-sink-volume 0 +5%
 bindsym $mod+a exec pactl set-sink-volume 0 -5%
+mode "kde" {
+	bindsym $mod+z exec playerctl play-pause --player kdeconnect
+	bindsym $mod+Shift+x exec playerctl next --player kdeconnect
+	bindsym $mod+Shift+z exec playerctl previous --player kdeconnect
+	bindsym $mod+Shift+a mode "default"
+	bindsym Escape mode "default"
+	bindsym $mod+x  exec playerctl volume 0.05+ --player kdeconnect
+	bindsym $mod+a exec playerctl volume 0.05- --player kdeconnect
+	
+} 
 
 bindsym $mod+e exec setxkbmap es
 bindsym $mod+u exec setxkbmap us
