@@ -31,3 +31,8 @@ command -nargs=1 So call so#search(<q-args>)
 command SoView call so#view()
 nnoremap <C-N> :call so#next()<CR>
 nnoremap <C-P> :call so#prev()<CR>
+
+highlight Normal guibg=none
+highlight NonText guibg=none
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
