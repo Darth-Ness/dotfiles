@@ -3,7 +3,7 @@
 
 # dotfiles
 - WM: I3
-- Terminal: LxTerminal
+- Terminal: Wezterm
 - Shell: Fish
 - Panel: Polybar
 - Editor: Neovim
@@ -13,6 +13,3 @@
 Note- Not all of these apps will have a dotfile
 
 My wallpapers may be found here: https://github.com/thefallnn/Nord-Wallpapers/tree/master/wallpapers
-
-# Todo:
-  * Try a different terminal
