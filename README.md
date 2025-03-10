@@ -1,4 +1,5 @@
-![2023-03-08_09-34](https://user-images.githubusercontent.com/75047141/223741090-144df0ce-4676-44ea-86a4-16eff48b7f1c.png)
+![2025-03-10_07-46](https://github.com/user-attachments/assets/f8284a32-36ed-4e79-ae27-bcfb5154f4f4)
+![2025-03-10_07-45](https://github.com/user-attachments/assets/940788f6-e6dd-4c4b-a203-b7226db689ee)
 
 # dotfiles
 - WM: I3
