@@ -1,5 +1,6 @@
 [bar/mybar]
 modules-left = ewmh 
+modules-center = nowPlaying
 modules-right = temperature pulseaudio memory cpu date
 background = #da2e3440
 foreground = #5e81ac
@@ -57,3 +58,11 @@ thermal-zone = 0
 base-temperature = 20
 warn-temperature = 60
 label-padding = 20px
+
+[module/nowPlaying]
+type = custom/script
+exec = /home/jayden/.config/polybar/nowPlaying.sh
+tail = true
+interval = 5
+interval-fail = 300
+interval-if = 180
