@@ -25,3 +25,15 @@ p {
 .comment,.usertext-body,.tagline {
     font-size: 16px;
 }
+code {
+    color: #fff;
+    background: #434c5e !important;
+    border: none !important;
+}
+ul {
+    color: #fff;
+}
+pre {
+    border: none !important;
+    background: #434c5e !important;
+}
