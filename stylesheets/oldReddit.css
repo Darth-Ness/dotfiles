@@ -30,7 +30,7 @@ code {
     background: #434c5e !important;
     border: none !important;
 }
-ul {
+ul,ol {
     color: #fff;
 }
 pre {
