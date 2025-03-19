@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ $# -eq 0 ]; then
+    cat ~/Documents/notes
+else
+    if [ "$1" != "-s" ]; then
+        echo $1 : $(date) >> ~/Documents/notes 
+    else
+        cat ~/Documents/notes | grep $2 --color
+    fi
+fi
