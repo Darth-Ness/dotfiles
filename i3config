@@ -154,3 +154,4 @@ mode "kde" {
 
 bindsym $mod+e exec setxkbmap es
 bindsym $mod+u exec setxkbmap us
+bindsym $mod+ctrl+z exec dunstctl close 
