@@ -6,4 +6,6 @@ if status is-interactive
     alias calc="bash ~/Documents/programming/scripts/calc"
     alias spell="bash ~/Documents/programming/scripts/spell"
     alias note="bash ~/Documents/programming/scripts/note"
+
+    set -g BROWSER librewolf
 end
