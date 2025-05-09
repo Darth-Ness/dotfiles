@@ -6,6 +6,8 @@ if status is-interactive
     alias calc="bash ~/Documents/programming/scripts/calc"
     alias spell="bash ~/Documents/programming/scripts/spell"
     alias note="bash ~/Documents/programming/scripts/note"
+    alias !="eval (history -n 1)"
 
     set -g BROWSER librewolf
+    set -gx EDITOR nvim
 end
