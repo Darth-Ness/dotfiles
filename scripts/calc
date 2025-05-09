@@ -1,1 +1,2 @@
-echo $(($1))
+var=$1
+awk -v var="$var" "BEGIN {print $var}"
