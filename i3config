@@ -118,7 +118,7 @@ bindsym $mod+minus scratchpad show
 # Show the sup-mail scratchpad window, if any.
 exec --no-startup-id xset s off -dpms which
 exec_always --no-startup-id xss-lock -- i3lock -ku -c 000000  --time-color=#bf616a --time-size=370 --fill
-bindsym $mod+d exec $ei rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -column 3 -font 'Sans 10'
+bindsym $mod+d exec $ei rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -column 3 -font 'Sans 10' 
 exec $ei picom --config .config/picom
 exec $ei bash ~/wallpaper
 exec $ei polybar
